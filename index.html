@@ -8,36 +8,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<script src="script.js" async></script>
     <title>FinalProject</title>
 </head>
 <body>
     <header>
-        <div>
-        <ul class="main-navi">
+        <div class="main-navi">
+        <ul class="main-navi-left">
             <li><a href="#01">About us</a></li>
             <li><a href="#02">Location</a></li>
             <li><a href="#03">Contact us</a></li>
         </ul>
+        <div class="cp_cont">
+            <div class="cp_offcm01">
+                <input type="checkbox" id="cp_toggle01">
+                <label for="cp_toggle01">Cart</label>
+                <div class="cp_menu">
+                    <div class="cart-row">
+                        <span class="cart-quantity cart-header cart-column">Quantity</span>
 
-            <!--sp navi-->
-        <div class="sp hamburger-menu">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
-            <nav class="menu-content">
-                <ul>
-                    <li><a href="#01">About us</a></li>
-                    <li><a href="#02">Location</a></li>
-                    <li><a href="#03">Contact us</a></li>
-                </ul>
-            </nav>
+                        <span class="cart-item cart-header cart-column">Item</span>
+                        <span class="cart-price cart-header cart-column"></span>
+                    </div>
+                    <div class="cart-items" id="cart-items">
+                    
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Total</strong>
+                        <span class="cart-total-price">$0</span>
+                    </div>
+                <div class="button-wrap">
+              <input class="clearButton" type="button" value="Clear" onclick="clearCart()">
+              <input class="purchaseButton" type="button" value="Checkout" onclick="purchaseItems()">
+            </div>
+              </div>
+            </div>
+            <div class="cp_contents">
+                </div>
+            </div>
         </div>
+
 </div>
 
     </header>
     <main>
 <div class="top-img"></div>
 
-<div id="01" class="aboutus">
+<!-- <div id="01" class="aboutus">
     <h2>About us</h2>
     <div class="aboutus-child">
         <img src="./images/abutus.jpg" width="100%" height="auto" alt="aboutus">
@@ -45,26 +62,127 @@
     </div>
 </div>
 
-<div class="speciality">
-    <div class="wrap">
-    <div class="speciality-child">
-        <img src="./images/coffee.jpg" width="100%" height="auto" alt="coffee">
-        <h3>Our coffee</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, obcaecati.</p>
-    </div>
-    <div class="speciality-child">
-        <img src="./images/coffee.jpg" width="100%" height="auto" alt="coffee">
-        <h3>Our food</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, obcaecati.</p>
-    </div>
 
-    <div class="speciality-child">
-        <img src="./images/coffee.jpg" width="100%" height="auto" alt="coffee">
-        <h3>Our dessert</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, obcaecati.</p>
+ -->
+
+<!--items-->
+
+
+
+<section class="container content-section">
+    <h2 class="section-header">Drinks</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title">Black cofee</span>
+            <img class="shop-item-image" src="images/coffee.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$4.2</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Tea</span>
+            <img class="shop-item-image" src="images/coffee.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$2.7</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button"type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Latte</span>
+            <img class="shop-item-image" src="images/coffee.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$5.0</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Matcha</span>
+            <img class="shop-item-image" src="images/coffee.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$6.2</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container content-section">
+    <h2 class="section-header">Sweets</h2>
+    <div class="shop-items">
+        <div class="shop-item"> 
+            <span class="shop-item-title">Cake 1</span>
+            <img class="shop-item-image" src="images/cake.jfif">
+                <span class="shop-item-price">$3.5</span>
+                <button  onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Cake 2</span>
+            <img class="shop-item-image" src="images/cake2.jfif">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$2.8</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Cake 3</span>
+            <img class="shop-item-image" src="images/cake.jfif">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$4.5</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Cake 4</span>
+            <img class="shop-item-image" src="images/cake2.jfif">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$4.1</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Cake 5</span>
+            <img class="shop-item-image" src="images/cake.jfif">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$3.2</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
     </div>
 </div>
-</div>
+</section>
+<section class="container content-section">
+    <h2 class="section-header">Goods</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title">Coffee mug 1</span>
+            <img class="shop-item-image" src="images/mug.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$13.25</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Coffee mug 2</span>
+            <img class="shop-item-image" src="images/mug.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$10.8</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button"type="button">ADD</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title">Coffee mug 3</span>
+            <img class="shop-item-image" src="images/mug.jpg">
+            <div class="shop-item-details">
+                <span class="shop-item-price">$7.6</span>
+                <button onclick="addItem()" class="btn btn-primary shop-item-button" type="button">ADD</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <div id="02" class="location">
     <h2>Location</h2>
     <div class="location-wrap">
