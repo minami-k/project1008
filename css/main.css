@@ -358,6 +358,7 @@ h2 {
   margin-right: 1.5em;
   padding-bottom: 10px;
   margin-top: 10px;
+  font-size: 13px;
 }
 
 .cart-row {
@@ -370,7 +371,6 @@ h2 {
 
 .cart-price {
   width: 20%;
-  font-size: 1.2em;
   color: #333;
   margin-right: 0;
   margin-left: 2rem;
@@ -492,8 +492,8 @@ a {
 	position: fixed;
 	top: 0;
 	right: -100vw;
-	width: 500px;
-	height: 60%;
+	width: 400px;
+	height: 85%;
 	cursor: pointer;
 	-webkit-transition: 0.53s transform;
 	        transition: 0.53s transform;
@@ -548,8 +548,8 @@ a {
   color:#473628 ;
 }
 .cp_offcm01 #cp_toggle01:checked ~ label {
-	-webkit-transform: translateX(-500px);
-	        transform: translateX(-500px);
+	-webkit-transform: translateX(-400px);
+	        transform: translateX(-400px);
 }
 .cp_offcm01 #cp_toggle01 ~ label::before {
 	font-family: 'FontAwesome';
